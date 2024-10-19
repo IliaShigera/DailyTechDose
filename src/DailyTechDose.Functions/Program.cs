@@ -1,10 +1,12 @@
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
-    .ConfigureServices(services =>
+    .ConfigureServices((context, services) =>
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
+
+        services.AddInfrastructure(context.Configuration);
     })
     .Build();
 
-host.Run();
+host.Run(); 

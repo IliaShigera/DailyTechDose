@@ -10,11 +10,23 @@ public static class ServiceCollectionExtension
 
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connection));
-        
+
         services.AddTransient<IRepository, AppDbContext>();
 
         #endregion
-        
+
+        #region ContentFetching
+
+        services.AddHttpClient();
+
+        services.AddSingleton<IContentFetchingStrategy, RssContentFetchingStrategy>();
+        services.AddSingleton<IContentFetchingStrategyResolver, ContentFetchingStrategyResolver>();
+        services.AddSingleton<IContentFilter, ContentFilter>();
+        services.AddSingleton<IContentFetcher, ContentFetcher>();
+        services.AddSingleton<IContentProcessingService, ContentProcessingService>();
+
+        #endregion
+
         return services;
     }
 }
