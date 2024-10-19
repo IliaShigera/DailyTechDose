@@ -6,5 +6,7 @@
 /// </summary>
 public interface IRepository
 {
+    DbSet<Source> Sources { get; }
+
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
