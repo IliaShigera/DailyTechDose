@@ -1,0 +1,10 @@
+global using System.Net;
+global using DailyTechDose.Core.DTOs;
+global using DailyTechDose.Core.Entities;
+global using DailyTechDose.Core.Interfaces;
+global using DailyTechDose.Infrastructure.ContentFetching;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using NSubstitute;
+global using NSubstitute.ExceptionExtensions;
+global using NUnit.Framework;

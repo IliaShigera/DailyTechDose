@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		local.settings.sample.json = local.settings.sample.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9CF2AC6A-633F-4927-BA5F-201C995F9DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyTechDose.UnitTests", "tests\DailyTechDose.UnitTests\DailyTechDose.UnitTests.csproj", "{D90B936E-CDE6-447A-8408-49ED66868194}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,7 @@ Global
 		{A3A3BD13-9C66-4D7C-9893-DCC12A460829} = {CC2560EA-D57E-469B-A8DA-2C8C75C85A2E}
 		{CC8C5A65-D415-492E-B74E-4806C4007100} = {CC2560EA-D57E-469B-A8DA-2C8C75C85A2E}
 		{384CB15C-58B1-433E-B36F-67492AE6B5ED} = {CC2560EA-D57E-469B-A8DA-2C8C75C85A2E}
+		{D90B936E-CDE6-447A-8408-49ED66868194} = {9CF2AC6A-633F-4927-BA5F-201C995F9DD6}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A3A3BD13-9C66-4D7C-9893-DCC12A460829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,5 +44,9 @@ Global
 		{384CB15C-58B1-433E-B36F-67492AE6B5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{384CB15C-58B1-433E-B36F-67492AE6B5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{384CB15C-58B1-433E-B36F-67492AE6B5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90B936E-CDE6-447A-8408-49ED66868194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90B936E-CDE6-447A-8408-49ED66868194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90B936E-CDE6-447A-8408-49ED66868194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90B936E-CDE6-447A-8408-49ED66868194}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
