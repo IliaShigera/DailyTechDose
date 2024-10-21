@@ -21,7 +21,7 @@ internal sealed class ContentProcessingService : IContentProcessingService
 
     public async Task ProcessAllSourcesAsync()
     {
-        var sources = await _repository.Sources.ToListAsync();
+        var sources = await _repository.ListAllAsync();
 
         _logger.LogDebug("Fetched {Count} sources.", sources.Count);
 
@@ -49,7 +49,7 @@ internal sealed class ContentProcessingService : IContentProcessingService
             foreach (var content in recentContent)
                 source.AddContentItem(content.Title, content.Summary, content.Link, content.PublishDate);
 
-            _repository.Sources.Update(source);
+            _repository.Update(source);
         }
         catch (Exception ex)
         {

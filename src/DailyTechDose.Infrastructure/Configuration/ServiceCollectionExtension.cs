@@ -11,7 +11,7 @@ public static class ServiceCollectionExtension
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connection));
 
-        services.AddTransient<IRepository, AppDbContext>();
+        services.AddTransient<IRepository, Repository>();
 
         #endregion
 

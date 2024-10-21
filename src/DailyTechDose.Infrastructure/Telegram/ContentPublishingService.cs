@@ -33,10 +33,7 @@ internal sealed class ContentPublishingService : IContentPublishingService
 
     public async Task PublishPendingContentAsync()
     {
-        var sources = await _repository.Sources
-            .Where(src => src.ContentItems.Any(content => !content.IsPublished))
-            .Include(src => src.ContentItems.Where(content => !content.IsPublished))
-            .ToListAsync();
+        var sources = await _repository.ListAllAsync(includePendingContent: true);
 
         var unpublishedContentList = sources.SelectMany(src => src.ContentItems).ToList();
         _logger.LogDebug("Fetched {Count} unpublished content items.", unpublishedContentList.Count);
@@ -50,7 +47,7 @@ internal sealed class ContentPublishingService : IContentPublishingService
         var publishTasks = unpublishedContentList.Select(PublishAndMarkAsync);
         await Task.WhenAll(publishTasks);
 
-        _repository.Sources.UpdateRange(sources);
+        _repository.UpdateRange(sources);
         await _repository.SaveChangesAsync();
     }
 

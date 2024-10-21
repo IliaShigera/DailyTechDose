@@ -8,6 +8,7 @@ global using DailyTechDose.Core.Entities;
 global using DailyTechDose.Core.Interfaces;
 global using DailyTechDose.Infrastructure.ContentFetching;
 global using DailyTechDose.Infrastructure.Data;
+global using DailyTechDose.Infrastructure.Data.Repo;
 global using DailyTechDose.Infrastructure.Telegram;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Design;

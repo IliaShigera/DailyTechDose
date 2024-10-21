@@ -1,6 +1,6 @@
 ﻿namespace DailyTechDose.Infrastructure.Data;
 
-internal sealed class AppDbContext : DbContext, IRepository
+internal sealed class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions options) : base(options)
     {
